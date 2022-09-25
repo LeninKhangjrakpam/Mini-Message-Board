@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  div 
+    a.submit(href='/new') Submit Message
+
+  each msg in messages
+    .msgCard
+      p.text= msg.text
+      p.user by: #{msg.user}
+      p.added= msg.added
