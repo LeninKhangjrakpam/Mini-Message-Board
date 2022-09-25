@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+  if errorMsg
+    .flashMsg
+      p= errorMsg
+
+  h1= title
+  p Welcome to #{title}
+
+  h1 Message Form 
+  .form-container 
+    form(method='post', action='/new')
+      label(for='messageText')
+        textarea(name='messageText', type='text', placeholder='Message Text', rows="4" cols="50", required, autofocus)
+      label(for='author')
+        input(name='author', type='text', placeholder='Author', required)
+      input(type='submit', value='Submit Message')

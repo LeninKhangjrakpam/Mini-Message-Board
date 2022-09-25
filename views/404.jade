@@ -1,0 +1,45 @@
+extends layout
+
+block content 
+  style.
+    .box  {
+      height: 10rem;
+      width: 10rem;
+      position: relative;
+      top: 5rem;
+    }
+    .circle   {
+      position: absolute;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background-color: red;
+      animation: bounce 1s linear 0s infinite forwards; 
+    }
+    @keyframes bounce {
+      0% {
+        top: 0%;
+        left: 50%;
+      }
+      30%  {
+        top: 50%;
+        left: 100%;
+      }
+      60%  {
+        top: 100%;
+        left: 50%;
+      }
+      80%  {
+        top: 50%;
+        left: 0%;
+      }
+      100%  {
+        top: 0%;
+        left: 50%;
+      }
+    }
+
+  h1 404 Not Found
+
+  .box
+    .circle
